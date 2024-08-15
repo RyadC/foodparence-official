@@ -1,6 +1,6 @@
 // * Imports
 import additifsEuropeenDiviseeOrdonneeFiltree from "./data/additifsEUROPA.js";
-import classificationSVG from "./assets/icon/classification.svg.js";
+import classificationSVG from "../public/assets/icon/classification.svg.js";
 import {
   capitalizeWord,
   createHTMLListElementAndInjectInDOM,
@@ -317,7 +317,7 @@ el_Form.addEventListener("submit", async function (e) {
 
     // Add wave img (no "alt" because image used as part of page design => see W3C)
     const waveImgEl = injectElement("img", el_ResultInformationSection);
-    waveImgEl.setAttribute("src", "src/assets/icon/Wave.png");
+    waveImgEl.setAttribute("src", "/assets/icon/Wave.png");
     waveImgEl.classList.add("wave");
 
     // Inject nutriscore img
@@ -336,13 +336,13 @@ el_Form.addEventListener("submit", async function (e) {
     if (!validNutriscore.includes(nutriscore)) {
       nutriscoreImgEl.setAttribute(
         "src",
-        "src/assets/images/NutriScore/NutriScore - Undefined.png"
+        "/assets/images/NutriScore/NutriScore - Undefined.png"
       );
       nutriscoreImgEl.setAttribute("alt", "Image nutriscore indéfini");
     } else {
       nutriscoreImgEl.setAttribute(
         "src",
-        `src/assets/images/NutriScore/NutriScore ${nutriscore}.png`
+        `/assets/images/NutriScore/NutriScore ${nutriscore}.png`
       );
       nutriscoreImgEl.setAttribute(
         "alt",
@@ -362,13 +362,13 @@ el_Form.addEventListener("submit", async function (e) {
     if (!validNutriscore.includes(nutriscore)) {
       novascoreImgEl.setAttribute(
         "src",
-        "src/assets/images/NovaScore/NovaScore Inconnu.png"
+        "/assets/images/NovaScore/NovaScore Inconnu.png"
       );
       novascoreImgEl.setAttribute("alt", "Image novascore inconnu");
     } else {
       novascoreImgEl.setAttribute(
         "src",
-        `src/assets/images/NovaScore/NovaScore ${novascore}_1.png`
+        `/assets/images/NovaScore/NovaScore ${novascore}_1.png`
       );
       novascoreImgEl.setAttribute(
         "alt",
