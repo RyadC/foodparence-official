@@ -231,7 +231,11 @@ el_Form.addEventListener("submit", async function (e) {
     );
     titleResultNameSectionEl.classList.add("result-section__subtitle");
 
-    const productNameEl = injectElement("p", el_ResultNameSection, result);
+    const productNameEl = injectElement(
+      "p",
+      el_ResultNameSection,
+      formatedBrand
+    );
     productNameEl.classList.add("resultName-section__product");
 
     // Inject allergens
